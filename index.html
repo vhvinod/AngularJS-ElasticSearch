@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS with ElasticSearch</title>
+</head>
+<body ng-app="testApp">
+
+<div ng-controller="mainController">
+    <form ng-submit="search()">
+        <label>
+            Search: <input type="text" ng-model="search.queryTerm" ng-change="autoComplete()"/>
+        </label>
+    </form>
+
+    <span>Results will be displayed when start typing...</span>
+    <ul>
+        <!-- <li ng-hide="autoCompleteResults.length">
+            No results found
+        </li> -->
+        <li ng-repeat="result in autoCompleteResults">
+            {{result._source.name}}
+        </li>
+    </ul>
+
+    <!-- <h3>Search:</h3>
+    <span>Hit enter to see results.</span>
+    <ul>
+        <li ng-hide="results.length">
+            No results found
+        </li>
+        <li ng-repeat="result in results">
+            {{result._source.name}}
+        </li>
+    </ul> -->
+</div>
+
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/elasticsearch/elasticsearch.angular.js"></script>
+
+<!-- App -->
+<script src="js/app.js"></script>
+<!-- Controllers -->
+<script src="js/controllers/mainController.js"></script>
+
+</body>
+</html>
