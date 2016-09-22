@@ -1,11 +1,11 @@
 # AngularJS-ElasticSearch
 
-Available features:-
+#Available features:-
 
-AutoComplete
-Search
+->AutoComplete
+->Search
 
-Versions
+#Versions
 
 Elasticsearch
 1.3.2	
