@@ -2,8 +2,9 @@
 
 Available features:-
 
-1. AutoComplete
-2. Search
+1. AutoComplete Search
+2. Normal Search
+3. Highlighting Search
 
 #Versions
 
