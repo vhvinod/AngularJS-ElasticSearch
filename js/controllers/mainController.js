@@ -8,7 +8,7 @@ app.controller('mainController', function ($scope, elasticClient) {
 
     $scope.autoComplete = function () {
         elasticClient.search({
-            index: 'user',
+            index: 'books',
             size: 10,
             body: {
                 'query': {
@@ -24,7 +24,7 @@ app.controller('mainController', function ($scope, elasticClient) {
 
     $scope.search = function () {
         elasticClient.search({
-            index: 'user',
+            index: 'books',
             size: 10,
             body: {
                 'query': {
@@ -38,7 +38,7 @@ app.controller('mainController', function ($scope, elasticClient) {
         });
         
         elasticClient.search({
-            index: 'basf',
+            index: 'books',
             body: {
 				'query':{
 					'filtered':{

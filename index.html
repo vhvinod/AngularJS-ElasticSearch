@@ -20,7 +20,7 @@
 <div ng-controller="mainController" class="container">
     <section class="content bgcolor-4">
     <form ng-submit="search()">
-        <h2 class="nomargin-bottom">User Details Search</h2>
+        <h2 class="nomargin-bottom">Books Search</h2>
         <span class="input input--hoshi">
         <input class="input__field input__field--hoshi" id="input-1" type="text" ng-model="search.queryTerm" ng-change="autoComplete()" placeholder ="Search..."/>
 		<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
@@ -38,7 +38,10 @@
             No results found
         </li>
         <li ng-repeat="result in autoCompleteResults">
-            {{result._source.name}}
+            {{result._source.bookName}}
+			{{result._source.author}}
+			{{result._source.description}}
+			{{result._source.type}}
         </li>
     </ul>
 
@@ -49,7 +52,10 @@
             No results found
         </li>
         <li ng-repeat="result in results">
-            {{result._source.name}}
+            {{result._source.bookName}}
+			{{result._source.author}}
+			{{result._source.description}}
+			{{result._source.type}}
         </li>
     </ul>
     
@@ -60,7 +66,10 @@
             No results found
         </li>
         <li ng-repeat="result in highlightResults">
-			{{result.highlight.name}}
+			{{result.highlight.bookName}}
+			{{result.highlight.author}}
+			{{result.highlight.description}}
+			{{result.highlight.type}}
         </li>
     </ul>
 </div>
