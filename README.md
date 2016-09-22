@@ -1,9 +1,9 @@
 # AngularJS-ElasticSearch
 
-#Available features:-
+Available features:-
 
-->AutoComplete
-->Search
+1. AutoComplete
+2. Search
 
 #Versions
 
