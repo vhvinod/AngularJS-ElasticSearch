@@ -2,27 +2,47 @@
 <html>
 <head>
     <title>AngularJS with ElasticSearch</title>
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Input Effects</title>
+	<meta name="description" content="Simple ideas for enhancing text input interactions" />
+	<meta name="keywords" content="input, text, effect, focus, transition, interaction, inspiration, web design" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/set1.css" />
 </head>
 <body ng-app="testApp">
 
-<div ng-controller="mainController">
+<div ng-controller="mainController" class="container">
+    <section class="content bgcolor-4">
     <form ng-submit="search()">
-        <label>
+        <h2 class="nomargin-bottom">User Details Search</h2>
+        <span class="input input--hoshi">
+        <input class="input__field input__field--hoshi" id="input-1" type="text" ng-model="search.queryTerm" ng-change="autoComplete()" placeholder ="Search..."/>
+		<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
+		<span class="input__label-content input__label-content--hoshi"></span>
+		</label>
+        </span>    
+        <!--<label>
             Search: <input type="text" ng-model="search.queryTerm" ng-change="autoComplete()"/>
-        </label>
+        </label>-->
     </form>
 
     <span>Results will be displayed when start typing...</span>
     <ul>
-        <!-- <li ng-hide="autoCompleteResults.length">
+        <li ng-hide="autoCompleteResults.length">
             No results found
-        </li> -->
+        </li>
         <li ng-repeat="result in autoCompleteResults">
             {{result._source.name}}
         </li>
     </ul>
 
-    <!-- <h3>Search:</h3>
+    <h3>Search:</h3>
     <span>Hit enter to see results.</span>
     <ul>
         <li ng-hide="results.length">
@@ -31,7 +51,18 @@
         <li ng-repeat="result in results">
             {{result._source.name}}
         </li>
-    </ul> -->
+    </ul>
+    
+    <h3>Highlighting:</h3>
+    <span>Results will be displayed with hightlighting.</span>
+    <ul>
+        <li ng-hide="highlightResults.length">
+            No results found
+        </li>
+        <li ng-repeat="result in highlightResults">
+			{{result.highlight.name}}
+        </li>
+    </ul>
 </div>
 
 <script src="lib/angular/angular.min.js"></script>
