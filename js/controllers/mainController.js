@@ -1,6 +1,7 @@
 app.controller('mainController', function ($scope, elasticClient) {
     $scope.results = [];
     $scope.autoCompleteResults = [];
+    $scope.highlightResults = [];
     $scope.search = {
         queryTerm: ''
     };
@@ -23,7 +24,7 @@ app.controller('mainController', function ($scope, elasticClient) {
 
     $scope.search = function () {
         elasticClient.search({
-            index: 'bank',
+            index: 'user',
             size: 10,
             body: {
                 'query': {
@@ -34,6 +35,31 @@ app.controller('mainController', function ($scope, elasticClient) {
             }
         }).then(function (response) {
             $scope.results = response.hits.hits;
+        });
+        
+        elasticClient.search({
+            index: 'basf',
+            body: {
+				'query':{
+					'filtered':{
+						'query':{
+							'match':{
+								'_all':{
+									'query':$scope.search.queryTerm,
+									'type':'phrase'
+									}
+								}
+							}
+						}
+					},
+				'highlight':{
+					'pre_tags':'<em>',
+					'post_tags':'</em>',
+					'fields':{'*':{}}
+				}
+			}
+        }).then(function (response) {
+            $scope.highlightResults = response.hits.hits;
         });
     }
 });
