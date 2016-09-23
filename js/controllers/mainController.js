@@ -25,7 +25,7 @@ app.controller('mainController', function ($scope, elasticClient) {
     $scope.search = function () {
         elasticClient.search({
             index: 'books',
-            size: 10,
+            size: 20,
             body: {
                 'query': {
                     'query_string': {
@@ -39,6 +39,7 @@ app.controller('mainController', function ($scope, elasticClient) {
         
         elasticClient.search({
             index: 'books',
+			size: 30,
             body: {
 				'query':{
 					'filtered':{
