@@ -10,6 +10,7 @@ Coming Features:-
 
 1. Full Text Search
 2. Fuzzy Search
+3. Multi Index and Index Type Search
 
 #Versions
 
