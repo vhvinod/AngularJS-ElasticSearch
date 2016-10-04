@@ -3,6 +3,7 @@ app.controller('mainController', function ($scope, elasticClient) {
     $scope.autoCompleteResults = [];
     $scope.highlightResults = [];
 	$scope.fuzzyResults = [];
+	$scope.multiIndexResults = [];
     $scope.search = {
         queryTerm: ''
     };
@@ -78,6 +79,19 @@ app.controller('mainController', function ($scope, elasticClient) {
 			}
         }).then(function (response) {
             $scope.fuzzyResults = response.hits.hits;
+        });
+		
+		elasticClient.search({
+            index: 'users,books',
+            body: {
+                'query': {
+                    'query_string': {
+                        'query': $scope.search.queryTerm
+                    }
+                }
+            }
+        }).then(function (response) {
+            $scope.multiIndexResults = response.hits.hits;
         });
     }
 });

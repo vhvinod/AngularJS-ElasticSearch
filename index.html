@@ -89,6 +89,20 @@
 			{{result._source.type}}
         </li>
     </ul>
+	
+	<h3>Multi Index and Index Type Search:</h3>
+    <span>Hit enter to see results.</span>
+    <ul>
+        <li ng-hide="multiIndexResults.length">
+            No results found
+        </li>
+        <li ng-repeat="result in multiIndexResults">
+            {{result._source.users.author}}
+			{{result._source.bookName}}
+			{{result._source.description}}
+			{{result._source.type}}
+        </li>
+    </ul>
 </div>
 </div>
 
