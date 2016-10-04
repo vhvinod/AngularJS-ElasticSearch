@@ -27,9 +27,9 @@ Need recent version Java, AngularJS and Elastic Search
 Make sure that your java_home environment variable points to the jdk1.8.0 folder extracted from the jdk download.
 
 ##Installation
-[Download](https://www.elastic.co/downloads/elasticsearch) and unzip the Elasticsearch official distribution.
-Run bin\elasticsearch.bat on windows.
-Run curl -X GET http://localhost:9200/
+*[Download](https://www.elastic.co/downloads/elasticsearch) and unzip the Elasticsearch official distribution.
+*Run bin\elasticsearch.bat on windows.
+*Run curl -X GET http://localhost:9200/
 
 
 ##To get Source Code
