@@ -76,6 +76,19 @@
 			{{result.highlight.type}}
         </li>
     </ul>
+	
+	<h3>Fuzzy Search:</h3>
+    <span>Hit enter to see results.</span>
+    <ul>
+        <li ng-hide="fuzzyResults.length">
+            No results found
+        </li>
+        <li ng-repeat="result in fuzzyResults">
+            {{result._source.bookName}}
+			{{result._source.description}}
+			{{result._source.type}}
+        </li>
+    </ul>
 </div>
 </div>
 

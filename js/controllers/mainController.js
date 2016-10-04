@@ -2,6 +2,7 @@ app.controller('mainController', function ($scope, elasticClient) {
     $scope.results = [];
     $scope.autoCompleteResults = [];
     $scope.highlightResults = [];
+	$scope.fuzzyResults = [];
     $scope.search = {
         queryTerm: ''
     };
@@ -61,6 +62,22 @@ app.controller('mainController', function ($scope, elasticClient) {
 			}
         }).then(function (response) {
             $scope.highlightResults = response.hits.hits;
+        });
+		
+		elasticClient.search({
+            index: 'fuzzy',
+            body: {
+			  'query': {
+				'multi_match': {
+				  'fields':  [ 'bookName', 'description','type' ],
+					'query': $scope.search.queryTerm,
+					'fuzziness': 2,
+					'prefix_length': 1
+				}
+			  }
+			}
+        }).then(function (response) {
+            $scope.fuzzyResults = response.hits.hits;
         });
     }
 });
