@@ -1,10 +1,6 @@
 {"index":{"_id":"1"}}
-{"id":"1","name":"Vinod Kumar V H","age":26,"gender":"M","company":"Infosys","city":"Bangalore","state":"Karnataka"}
+{"author":"Shiv Khera","id":1}
 {"index":{"_id":"2"}}
-{"id":"2","name":"Manoj Kumar D","age":26,"gender":"M","company":"Infosys","city":"Bangalore","state":"Karnataka"}
+{"author":"Chetan Bhagat","id":2}
 {"index":{"_id":"3"}}
-{"id":"3","name":"Prashant P","age":24,"gender":"M","company":"Infosys","city":"Pune","state":"Maharastra"}
-{"index":{"_id":"4"}}
-{"id":"4","name":"Naveen Kumar Y","age":25,"gender":"M","company":"Infosys","city":"Bangalore","state":"Karnataka"}
-{"index":{"_id":"5"}}
-{"id":"5","name":"Hareesh Kumar A","age":25,"gender":"M","company":"TCS","city":"Bangalore","state":"Karnataka"}
+{"author":"Ravinder Singh","id":3}
