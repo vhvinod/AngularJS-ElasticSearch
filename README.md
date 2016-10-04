@@ -1,16 +1,16 @@
 # AngularJS-ElasticSearch
 
-Available Features:-
+###Available Features:-
 
 1. AutoComplete Search
 2. Normal Search
 3. Highlighting Search
+4. Fuzzy Search
 
-Coming Features:-
+###Coming Features:-
 
 1. Full Text Search
-2. Fuzzy Search
-3. Multi Index and Index Type Search
+2. Multi Index and Index Type Search
 
 #Versions
 Technology or S/W | Version

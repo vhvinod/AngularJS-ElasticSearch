@@ -1,4 +1,13 @@
 {
+	"id": "1",
+	"bookName": "You Can Win",
+	"author": "Shiv Khera",
+	"description": "There are no shortcut to success, inspiration and motivation are needed as much as hard work to be successful in life is how Shiv Khera put it in You Can Win, a book that has become an international bestseller. The core of this book is about improvising ones though processes by gaining from ancient wisdom and modern philosophy. Using both traditional and modern day concepts and ideologies, one can easily sort out their daily life problems with simple yet effective solutions.",
+	"type": "Business, Strategy & Management",
+	"image": "you-can-win-shiv-kera.JPG"
+}
+
+{
 	"id":"2",
 	"bookName":"2 States The Story of My Marriage",
 	"author":"Chetan Bhagat",
