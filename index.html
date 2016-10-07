@@ -103,6 +103,17 @@
 			{{result._source.type}}
         </li>
     </ul>
+	
+	<h3>Full Text Search:</h3>
+    <span>Hit enter to see results.</span>
+    <ul>
+        <li ng-hide="fullTextResults.length">
+            No results found
+        </li>
+        <li ng-repeat="result in fullTextResults">
+			{{result._source.description}}
+        </li>
+    </ul>
 </div>
 </div>
 

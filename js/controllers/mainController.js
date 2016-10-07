@@ -4,6 +4,7 @@ app.controller('mainController', function ($scope, elasticClient) {
     $scope.highlightResults = [];
 	$scope.fuzzyResults = [];
 	$scope.multiIndexResults = [];
+	$scope.fullTextResults = [];
     $scope.search = {
         queryTerm: ''
     };
@@ -92,6 +93,19 @@ app.controller('mainController', function ($scope, elasticClient) {
             }
         }).then(function (response) {
             $scope.multiIndexResults = response.hits.hits;
+        });
+		
+		elasticClient.search({
+            index: 'books',
+            body: {
+				'query' : {
+					'match' : {
+						'description' : $scope.search.queryTerm
+					}
+				}
+			}
+        }).then(function (response) {
+            $scope.fullTextResults = response.hits.hits;
         });
     }
 });
