@@ -10,12 +10,9 @@ Implement basic and different types of search functionality using AngularJS and 
 3. Highlighting Search
 4. Fuzzy Search
 5. Multi Index and Index Type Search
+6. Full Text Search
 
-###Coming Features:-
-
-1. Full Text Search
-
-#Versions
+##Versions
 Technology or S/W | Version
 ------------------|------- 
 Elasticsearch     | 2.4.0	
