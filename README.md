@@ -30,8 +30,10 @@ Make sure that your java_home environment variable points to the jdk1.8.0 folder
 * Run curl -X GET http://localhost:9200/
 
 ##Sample data
+please execute init.sh for sample data
+```
 $ ./init.sh
-
+```
 ##To get Source Code
 git clone https://github.com/vhvinod/AngularJS-ElasticSearch.git
 
