@@ -16,7 +16,7 @@ app.controller('mainController', function ($scope, elasticClient) {
             body: {
                 'query': {
                     'query_string': {
-                        'query': $scope.search.queryTerm
+                        'query': $scope.search.queryTerm+'*'
                     }
                 }
             }
